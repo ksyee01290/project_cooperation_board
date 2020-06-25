@@ -1,24 +1,16 @@
 package java_socket;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.DataInputStream;
 import java.net.Socket;
 
-public class client {
-    public static void main(String[] args){
+public class Client{
+
+    public static void main(String[] args) {
         try{
-            Socket c_socket = new Socket("127.0.0.1",8888);
-            InputStream input_data = c_socket.getInputStream();
+            Socket socket = new Socket("localhost", 10002);
+            System.out.println("접속 성공!");
+        } catch(Exception e){
 
-            byte[] receiveBuffer = new byte[100];
-            input_data.read(receiveBuffer);
-
-            System.out.println(new String(receiveBuffer));
-
-            c_socket.close();
-
-        }catch(IOException e){
-            e.printStackTrace();
         }
     }
 }

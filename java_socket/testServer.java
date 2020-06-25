@@ -5,7 +5,7 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class socket{
+public class testServer{
     public static void main(String[] args){
         try{
             ServerSocket s_socket = new ServerSocket(8888);
